@@ -1,0 +1,61 @@
+.center-task{
+    position: relative;
+    width:900px;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    top:50px;
+    border: 1px solid red;;
+}
+
+.list-data{
+    position: relative;
+    margin: auto;
+    width:700px;
+    background-color: black;
+    border: 0.2px solid red;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+i{
+ margin-right: 10px;
+}
+
+.filtermenu{
+    position: absolute;
+    top:0px;
+    left:960px;
+    width:210px;
+}
+
+.filtermenu h3{
+    padding: 3px 13px;
+    width:fit-content;
+    border: 1px solid white;
+}
+
+#newTaskInput{
+    position: relative;
+    margin-right:20px ;
+    margin-top: 20px;
+    height: 30px;
+    width: 600px;
+    margin-left: 110px;
+}
+
+.btntasksubmit{
+    height: 35px;
+    background-color: red;
+    color:white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+
+.btntasksubmit:hover{
+    background-color: rgb(98, 0, 0);
+}
+

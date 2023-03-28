@@ -1,0 +1,9 @@
+.contentshown{
+    position: relative;
+    margin: auto;
+    width:86%;
+    height: 90%;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px dotted red;
+}

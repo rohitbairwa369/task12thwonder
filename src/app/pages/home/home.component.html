@@ -1,0 +1,30 @@
+<div class="center-task">
+<i class="fa-solid fa-earth-asia fa-2xl" style="color: #ffffff;"></i>
+<span>Global Tasks</span>
+<br>
+<div class="list-data">
+    <ol>
+        <li *ngFor="let data of filteredglobal">{{data.text}}</li>
+    </ol>
+</div>
+
+<i class="fa-solid fa-person fa-2xl" style="color: #ffffff;"></i>
+<span>Personal Tasks</span>
+<br>
+<div class="list-data">
+    <ol>
+        <li *ngFor="let data of filteredpersonal" >{{data.text}}</li>
+    </ol>
+</div>
+<i class="fa-solid fa-chess-king fa-2xl" style="color: #ffffff;"></i>
+<span>Leader's Tasks</span>
+<br>
+<div class="list-data">
+    <ol>
+        <li *ngFor="let data of filteredleader">{{data.text}}</li>
+    </ol>
+</div>
+
+
+
+</div>

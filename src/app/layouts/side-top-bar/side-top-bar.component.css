@@ -1,0 +1,52 @@
+.topbar{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    height:45px;
+    border:1px solid red;
+    color:white;
+    background-color:black;
+    border-bottom:1px solid white;
+    font-family: 'Alkatra', cursive;
+  }
+  
+  .topbar span{
+    margin-right:20px;
+  }
+
+  .logotext{
+    margin-left: 20px;
+    font-family: 'Alkatra', cursive;
+    font-size:1.5em;
+  }
+  
+  .sidebar{
+    position: absolute;
+    background-color:black;
+    width:80px;
+    height:150vh;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border:1px solid red;
+    border-right:1px dotted white;
+    border-top: none;
+  }
+  
+
+.sidebar i{
+    cursor: pointer;
+    padding:6px;
+}
+.active-icons{
+    background-color: red;
+    border-radius: 2px;
+}
+
+.sidebar i:hover{
+    background-color: red;
+    border-radius: 2px;
+}
