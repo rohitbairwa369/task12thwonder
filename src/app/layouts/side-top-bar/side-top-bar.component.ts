@@ -12,11 +12,10 @@ export class SideTopBarComponent {
   filteredpersonal:any;
 
   constructor(private taskService: TaskService ){
-    this.taskService.getTasks().subscribe(tasks => {
-      this.taskdata= tasks;
-      this.filteredpersonal = this.taskdata.tasks.filter( (task: { isGlobal: any; })=>!task.isGlobal)
-    });
+    this.taskService.getTasks().subscribe((tasks) => {
+      this.taskdata = tasks;
+      console.log(this.taskdata)
+  });
   }
-
 
 }

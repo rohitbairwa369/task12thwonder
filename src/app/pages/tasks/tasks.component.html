@@ -1,44 +1,33 @@
 <div class="center-task">
     <i class="fa-solid fa-list-check fa-2xl" style="color: #ffffff;"></i>
     <span>All Tasks</span>
+    {{filterType | json}}
     <div class="filtermenu">
         <h3>Filter tasks</h3>
         <select [(ngModel)]="filterType">
-            <option value="all">All tasks</option>
+            <option value="">All tasks</option>
             <option value="global">Global tasks</option>
             <option value="personal">Personal tasks</option>
             <option value="leaders">Leaders tasks</option>
           </select>       
     </div>
     <br>
-    <div class="list-data" *ngIf="filterType === 'all'">
+     <div class="list-data" *ngIf="taskdata?.length">
         <ol>
-            <li *ngFor="let data of filteredtask">{{data.text}}</li>
-        </ol>
-    </div>
-    <div class="list-data" *ngIf="filterType === 'global'">
-        <ol>
-            <li *ngFor="let data of filteredglobal">{{data.text}}</li>
-        </ol>
-    </div>
-    <div class="list-data" *ngIf=" filterType === 'leaders'">
-        <ol>
-            <li *ngFor="let data of filteredleader">{{data.text}}</li>
-        </ol>
-    </div>
-    <div class="list-data" *ngIf="filterType === 'personal'">
-        <ol>
-            <li *ngFor="let data of filteredpersonal">{{data.text}}</li>
-        </ol>
-    </div>
+            <li *ngFor="let task of taskdata | taskfilter:filterType">{{task.text }}
 
+                <button (click)="deleteTask(task)">Delete</button>
+            </li>
+            
+        </ol>
     </div>
+   
 
     <div class="center-task">
         <div class="inputtasks">
             <i class="fa-solid fa-plus" style="color: #ffffff;"></i><label for="newTaskInput">Add Personal Task:</label><br>
             <input type="text" id="newTaskInput" [(ngModel)]="newTask">
-            <button (click)="addTask()" class="btntasksubmit">Add Task</button>
+            <button (click)="addTask(newTask)" class="btntasksubmit">Add Task</button>
           </div>
     </div>
     
